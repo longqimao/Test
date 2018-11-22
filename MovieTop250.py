@@ -5,7 +5,7 @@ headers = {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36
 						 "(KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36"}
 for i in range(10):
 	url = 'https://movie.douban.com/top250?start=' + str(i * 25)
-	response = requests.get(url, headers=headers)
+	response = requests.get(url, headers=headers)#抓取页面
 	html = etree.HTML(response.text) #调用HTML类进行初始化，构造XPath解析对象
 	lists = html.xpath("//ol[@class='grid_view']/li")# 获取25个li节点，节点里包含电影信息
 	for item in lists: #遍历lists
