@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+#coding=utf-8
 # @Time     : 2018/12/16 9:42
 from random import randint
 def guess(start, end, maxTimes):
@@ -16,14 +16,14 @@ def guess(start, end, maxTimes):
             x = int(input(prompt))
             if x == value:
                 print('Congratulation!')
-                print('你总共猜了', time, '次。')
+                print("你总共猜了", time,"次。")
                 break
             elif x > value:
                 print('Too big!')
             elif x < value:
                 print('Too little!')
-        except ValueError:
+        except (NameError,SyntaxError,ValueError):
             print('Must input a number!')
     else:
         print('The value is', value)
-guess(1, 10, 5)
+guess(1, 100, 10)

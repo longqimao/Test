@@ -22,12 +22,3 @@ for item in items:
 	with open('explore.txt', 'a', encoding='utf-8') as file:
 		file.write('\n'.join([question, author, answer]))
 		file.write('\n' + '=' *50 + '\n')
-
-
-
-
-
-
-
-
-
